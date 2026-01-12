@@ -1,4 +1,4 @@
-# Concentration Tracker
+# Concentration Tracker... 
 
 A real-time concentration tracking system built using **MediaPipe** and **OpenCV**. This tool evaluates a user's attentiveness based on eye blinks, gaze direction, and head pose — ideal for applications like study monitoring, e-learning, or productivity enhancement.
 
