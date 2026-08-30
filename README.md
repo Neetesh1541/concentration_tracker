@@ -1,56 +1,54 @@
-# Concentration Tracker... 
+# 🎯 Concentration Tracker
 
-A real-time concentration tracking system built using **MediaPipe** and **OpenCV**. This tool evaluates a user's attentiveness based on eye blinks, gaze direction, and head pose — ideal for applications like study monitoring, e-learning, or productivity enhancement.
+A real-time computer-vision experiment that estimates attentiveness from webcam input using eye blinks, gaze direction, and head pose.
 
-## Features
+## ✨ Features
 
-- **Eye Blink Detection**  
-  Calculates Eye Aspect Ratio (EAR) to detect blinks and periods of eye closure.
+- 👁️ Eye-blink detection using Eye Aspect Ratio (EAR)
+- 👀 Gaze-direction estimation
+- 🧭 Head-pose estimation
+- 📊 Composite concentration score
+- 🖥️ Live visual feedback
+- ⚠️ Distraction tracking
+- 📈 FPS and status indicators
 
-- **Gaze Detection**  
-  Estimates if the user is looking straight or away using iris landmarks.
+## 🧠 How It Works
 
-- **Head Pose Estimation**  
-  Evaluates user orientation based on nose position relative to screen center.
+1. MediaPipe FaceMesh detects facial landmarks.
+2. EAR is used to identify blinking and eye closure.
+3. Iris landmarks help estimate gaze direction.
+4. Facial geometry is used to infer head orientation.
+5. The signals are combined into a concentration score.
+6. Results are rendered live over the webcam feed.
 
-- **Concentration Score**  
-  Computes a weighted score combining gaze, head pose, and blinking behavior.
-
-- **Live Visual Feedback**  
-  Real-time UI overlay on webcam feed showing concentration level, blink status, and distraction counter.
-
-- **Distraction Tracking**  
-  Counts how many frames the user is not paying attention and issues warnings if needed.
-
-## Sample Output
-
-The video feed displays:
-- A concentration percentage bar
-- Blink detection alerts
-- Distraction count
-- ACTIVE / DISTRACTED indicator
-- FPS counter
-
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Python 3.x
 - OpenCV
-- MediaPipe (FaceMesh)
+- MediaPipe
 - NumPy
 
-## How It Works
-
-1. **Face landmarks** are detected using MediaPipe FaceMesh.
-2. **EAR (Eye Aspect Ratio)** is used to detect blinks.
-3. **Iris position** is used to assess gaze direction.
-4. **Nose position** is used to infer head pose.
-5. A **composite concentration score** is calculated as: score = 0.4 * gaze + 0.4 * head_pose + 0.2 * (not blinking)
-6. A **visual feedback system** shows user concentration in real time.
-
-## Run the Project
+## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/asutoshp10/concentration_tracker.git
+git clone https://github.com/Neetesh1541/concentration_tracker.git
 cd concentration_tracker
 pip install -r requirements.txt
 python concentration_tracker.py
+```
+
+## ⚠️ Important Note
+
+The concentration score is an experimental computer-vision estimate, not a medical or scientifically validated measurement of attention.
+
+## 🔮 Future Improvements
+
+- Calibration for different users
+- Better gaze estimation
+- Session history and analytics
+- Configurable attention thresholds
+- Improved robustness under different lighting
+
+## 👨‍💻 Author
+
+Built by **Neetesh Sharma**.
